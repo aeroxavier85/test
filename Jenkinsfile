@@ -4,7 +4,6 @@ pipeline {
     stage('Build') {
       steps {
         echo 'print ttest'
-        git(url: 'https://github.com/aeroxavier85/test.git', branch: 'master', changelog: true)
       }
     }
 
