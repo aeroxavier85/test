@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'print ttest'
-        sh 'sh run_build_script.sh'
+        git(url: 'https://github.com/aeroxavier85/test.git', branch: 'master', changelog: true)
       }
     }
 
@@ -13,7 +13,6 @@ pipeline {
         stage('Linux test') {
           steps {
             echo 'RUN LINUX  tests'
-            sh 'sh run_linux_tests.sh'
           }
         }
 
