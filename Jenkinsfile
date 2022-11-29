@@ -5,7 +5,7 @@ pipeline {
       agent any
       steps {
         echo 'print ttest'
-        sh 'sudo docker run -idt -p 8080:80 apache_latest'
+        sh 'docker run -idt -p 8080:80 apache_latest'
       }
     }
 
